@@ -14,9 +14,20 @@ Do not commit private keys, signing keys, passwords, recovery codes, API keys, p
 
 ## Current public locations
 
+- `trusted-anchor-registry/v2/registry.json` - current public registry snapshot.
+- `trusted-anchor-registry/v2/registry.sha256` - checksum for the registry snapshot.
 - `trusted-anchor-registry/v2/eligent-root-2026-01.json` - current public anchor signing key record.
+- `trusted-anchor-registry/v2/eligent-root-2026-01.spki-sha256` - pinned SPKI SHA-256 fingerprint for the current root.
 - `anchors/latest-anchor.json` - latest public ledger anchor mirror.
 - `anchors/history/` - historical public ledger anchor records.
+
+## Current pinned fingerprint
+
+```text
+f11ac208e795e781fbe81b87525b3db0425e8bdafb274dd6806d10d0783b41ad
+```
+
+The fingerprint is SHA-256 over the root public key's SubjectPublicKeyInfo DER bytes.
 
 ## Verification boundary
 
