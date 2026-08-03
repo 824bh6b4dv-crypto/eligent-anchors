@@ -1,0 +1,15 @@
+{
+  "type": "eligent.ledger.anchor",
+  "version": 1,
+  "domain": "eligent-ledger",
+  "hashAlgorithm": "SHA-256-v1",
+  "anchorDate": "2026-03-07",
+  "ledgerRoot": "3EBD618FE3B08476D63F7A8371D58CC23D23596317D3B181BC8441D88D42B499",
+  "artifactCount": 55,
+  "publishedAt": "2026-03-07T22:10:22.490913Z",
+  "anchorKind": "daily",
+  "reason": null,
+  "segmentId": null,
+  "firstCorruptedArtifact": null,
+  "artifactsVerifiedBeforeFailure": null
+}
