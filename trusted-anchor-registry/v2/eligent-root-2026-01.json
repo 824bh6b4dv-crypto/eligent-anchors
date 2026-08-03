@@ -1,0 +1,19 @@
+{
+  "registryVersion": "2.0",
+  "recordType": "eligent.trusted-anchor-key-record",
+  "keyId": "eligent-root-2026-01",
+  "algorithm": "RSA-SHA256",
+  "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzqPe4j6QqHR8G8FkuT30\n5QadZAuojKNqzwnHH5m904HUeNvZgsi3RjYLdCziWUm+9vKuUJmgmDEGyMh+19DW\n/n7LCrQ1qEfMoiJG7aSSevqb7jwJWF/vDkIGtD5tlTJ1ufk9WxRbJ9hBaAjfA8kJ\nmra1wvM9GHqZajxW8EuQrygQ445lSjhMKuSuV0JL6/Jv5YEXODsF916WCJvHkcOT\ne3qTZOfNhAgISi0O6QF6PWtj7G5shxcJ3B5+6mJWlXHfWIvfqFK5Sti/HJAB9T8W\n9wf/EaxDivKd3LGCF+0EUtRf1eknoa5+u1gP/U/CHMq0t5H9EC2Mb0k2DGOjvxg7\nOQIDAQAB\n-----END PUBLIC KEY-----",
+  "status": "ACTIVE",
+  "validFrom": "2026-01-01T00:00:00Z",
+  "validTo": "2028-01-01T00:00:00Z",
+  "issuer": "Eligent",
+  "purpose": [
+    "ANCHOR_SIGNING"
+  ],
+  "providerIds": [
+    "eligent-anchor-provider"
+  ],
+  "version": 1,
+  "trustBoundary": "Public mirror only. A verifier must trust this key or its fingerprint through an independent pinned resolver before accepting signatures."
+}
