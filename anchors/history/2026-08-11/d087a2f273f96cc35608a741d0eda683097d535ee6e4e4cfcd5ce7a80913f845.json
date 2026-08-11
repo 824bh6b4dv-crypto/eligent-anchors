@@ -1,8 +1,5 @@
 {
   "schemaVersion": "v1",
-  "historyRecordPath": "anchors/history/2026-08-11/d087a2f273f96cc35608a741d0eda683097d535ee6e4e4cfcd5ce7a80913f845.json",
-  "historyRecordUri": "https://raw.githubusercontent.com/824bh6b4dv-crypto/eligent-anchors/main/anchors/history/2026-08-11/d087a2f273f96cc35608a741d0eda683097d535ee6e4e4cfcd5ce7a80913f845.json",
-  "anchorHash": "3d7b43a4a5203bc12f8dd9ade318dedf887a2943ae577f3e5d1dba0ea5e7a8cd",
   "merkleRoot": "9225215dbc7fe86e4d2b7d2649ad56e95a5e56588bc64564531661a8bcf4ad41",
   "bStarCommitmentReference": "B*:Sha256:d087a2f273f96cc35608a741d0eda683097d535ee6e4e4cfcd5ce7a80913f845",
   "bStarCommitmentDigestHex": "d087a2f273f96cc35608a741d0eda683097d535ee6e4e4cfcd5ce7a80913f845",
@@ -15,5 +12,8 @@
       "encodingVersion": "hex-v1"
     }
   ],
-  "anchoredAtUtc": "2026-08-11T13:48:00.196567+00:00"
+  "previousAnchorHash": null,
+  "batchWindowId": "2026-08-11T13.48.00Z/1",
+  "anchoredAtUtc": "2026-08-11T13:48:00.196567+00:00",
+  "anchorHash": "3d7b43a4a5203bc12f8dd9ade318dedf887a2943ae577f3e5d1dba0ea5e7a8cd"
 }
