@@ -15,12 +15,13 @@ jobs:
     name: Owner Approval Gate
     runs-on: ubuntu-latest
     steps:
-      - name: Enforce owner approval for contributor PRs
+      - name: Enforce Christian approval for contributor PRs
         uses: actions/github-script@v7
         with:
           script: |
-            const owner = context.repo.owner;
+            const repoOwner = context.repo.owner;
             const repo = context.repo.repo;
+            const approvalAuthority = '824bh6b4dv-crypto';
             const pr = context.payload.pull_request;
 
             if (!pr) {
@@ -28,28 +29,28 @@ jobs:
               return;
             }
 
-            if (pr.user?.login === owner) {
-              core.info(`PR authored by repository owner ${owner}; no second-human approval required.`);
+            if (pr.user?.login === approvalAuthority) {
+              core.info(`PR authored by ${approvalAuthority}; no second-human approval required.`);
               return;
             }
 
             const reviews = await github.paginate(github.rest.pulls.listReviews, {
-              owner,
+              owner: repoOwner,
               repo,
               pull_number: pr.number,
               per_page: 100
             });
 
-            const ownerReviewsOnHead = reviews
-              .filter(r => r.user?.login === owner && r.commit_id === pr.head.sha)
+            const authorityReviewsOnHead = reviews
+              .filter(r => r.user?.login === approvalAuthority && r.commit_id === pr.head.sha)
               .sort((a, b) => new Date(a.submitted_at || 0) - new Date(b.submitted_at || 0));
 
-            const latest = ownerReviewsOnHead.at(-1);
+            const latest = authorityReviewsOnHead.at(-1);
             if (latest?.state === 'APPROVED') {
-              core.info(`Contributor PR approved by ${owner} on current head ${pr.head.sha}.`);
+              core.info(`Contributor PR approved by ${approvalAuthority} on current head ${pr.head.sha}.`);
               return;
             }
 
             core.setFailed(
-              `PRs authored by anyone other than ${owner} require an APPROVED review from ${owner} on the current head commit before merge.`
+              `PRs authored by anyone other than ${approvalAuthority} require an APPROVED review from ${approvalAuthority} on the current head commit before merge.`
             );
